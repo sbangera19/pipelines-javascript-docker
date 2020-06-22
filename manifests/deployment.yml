@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: shreyaspipelinetest 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: shreyaspipelinetest 
+    spec:
+      containers:
+        - name: shreyaspipelinetest 
+          image: nbapoc.azurecr.io/shreyaspipelinetest
+          ports:
+          - containerPort: 8080
